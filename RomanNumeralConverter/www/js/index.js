@@ -17,39 +17,40 @@ var app = {
     }
 };
 
-$('#convertToArabic').hide();
+$('#convertToArabicArea').hide();
 
 $('#changeConversion').on('click', function() {
-	if ($('#convertToArabic').is(':hidden')) {
-		$('#convertToArabic').show();
-		$('#convertToRoman').hide();
+	$('#result').html('');
+	if ($('#convertToArabicArea').is(':hidden')) {
+		$('#convertToArabicArea').show();
+		$('#convertToRomanArea').hide();
 		$('#changeConversion').html('Convert Roman Numerals to Arabic Numbers');
 	}
 	else {
-		$('#convertToArabic').hide();
-		$('#convertToRoman').show();
+		$('#convertToArabicArea').hide();
+		$('#convertToRomanArea').show();
 		$('#changeConversion').html('Convert Arabic Numbers to Roman Numerals');
 	}
 });
 
 $('#convertToRoman').on('click',function(){
 	var result = convertToRoman($('#arabic').val());
-	$('#romanResult').html(result);
+	$('#result').html(result);
 });
 
 $('#convertToArabic').on('click', function() {
 	var result = convertToArabic($('#roman').val());
-	$('#arabicResult').html(result);
+	$('#result').html(result);
 });
 
 $('#clearRoman').on('click',function(){
 	$('#arabic').val('');
-	$('#romanResult').html('');
+	$('#result').html('');
 });
 
 $('#clearArabic').on('click', function() {
 	$('#roman').val('');
-	$('#arabicResult').html('');
+	$('#reslt').html('');
 });
 
 function convertToRoman(arabicValue) {
@@ -130,6 +131,10 @@ function convertToRoman(arabicValue) {
 
 
 function convertToArabic(romanValue) {
+
+	if(romanValue.length = 0)
+		return 'Please provide a roman numeral';
+
 	var arabic = 0;
 	var limitRepeating = 3;
 	var repeater = 0;

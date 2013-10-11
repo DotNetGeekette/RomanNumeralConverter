@@ -29,7 +29,7 @@
     <body>
         <div class="app">
           <h1>Roman Numeral Converter</h1>
-          <div id="convertToRoman">
+          <div class="conversionArea" id="convertToRomanArea">
             <div class="inputRow">
               <div class="colLeft">
                 <span class="label">Arabic Value:</span>
@@ -38,15 +38,16 @@
                 <input id="arabic" type="number"></input>
               </div>
             </div>
-            <div class="convertBtn">
-              <button id="convertToRoman" type="button">Convert</button>
+            <div class="btnContainer">
+              <div class="convertBtn">
+                <button id="convertToRoman" type="button">Convert</button>
+              </div>
+              <div class="clearBtn">
+                <button id="clearRoman" type="button">Clear</button>
+              </div>
             </div>
-            <div class="clearBtn">
-              <button id="clearRoman" type="button">Clear</button>
-            </div>
-            <span id="romanResult"></span>
           </div>
-          <div id="convertToArabic">
+          <div class="conversionArea" id="convertToArabicArea">
             <div class="inputRow">
               <div class="colLeft">
                 <span class="label">Roman Value:</span>
@@ -55,13 +56,20 @@
                 <input id="roman" type="text"></input>
               </div>
             </div>
-            <div class="convertBtn">
-              <button id="convertToArabic" type="button">Convert</button>
+            <div class="btnContainer">
+              <div class="convertBtn">
+                <button id="convertToArabic" type="button">Convert</button>
+              </div>
+              <div class="clearBtn">
+                <button id="clearArabic" type="button">Clear</button>
+              </div>
             </div>
-            <div class="clearBtn">
-              <button id="clearArabic" type="button">Clear</button>
-            </div>
-            <span id="arabicResult"></span>
+          </div>
+          <div class="resultBox">
+            <span>Result:</span>
+            <br />
+            <br />
+            <span id="result"></span>
           </div>
           <div class="changeLink">
             <a id="changeConversion">Convert Roman Numerals to Arabic Numbers</a>
