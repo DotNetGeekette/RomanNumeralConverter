@@ -17,6 +17,21 @@ var app = {
     }
 };
 
+$('#convertToArabic').hide();
+
+$('#changeConversion').on('click', function() {
+	if ($('#convertToArabic').is(':hidden')) {
+		$('#convertToArabic').show();
+		$('#convertToRoman').hide();
+		$('#changeConversion').html('Convert Roman Numerals to Arabic Numbers');
+	}
+	else {
+		$('#convertToArabic').hide();
+		$('#convertToRoman').show();
+		$('#changeConversion').html('Convert Arabic Numbers to Roman Numerals');
+	}
+});
+
 $('#convertToRoman').on('click',function(){
 	var result = convertToRoman($('#arabic').val());
 	$('#romanResult').html(result);

@@ -28,27 +28,32 @@
     </head>
     <body>
         <div class="app">
-          <div class="inputRow">
-            <div class="colLeft">
-              <span class="label">Arabic Value:</span>
+          <h1>Roman Numeral Converter</h1>
+          <div id="convertToRoman">
+            <div class="inputRow">
+              <div class="colLeft">
+                <span class="label">Arabic Value:</span>
+              </div>
+              <div class="colRight">
+                <input id="arabic" type="number"></input>
+              </div>
             </div>
-            <div class="colRight">
-              <input id="arabic" type="number"></input>
+            <div class="convertBtn">
+              <button id="convertToRoman" type="button">Convert</button>
             </div>
-          </div>
-          <div class="convertBtn">
-            <button id="convertToRoman" type="button">Convert</button>
-          </div>
-          <div class="clearBtn">
-            <button id="clearRoman" type="button">Clear</button>
-          </div>
-          <span id="romanResult"></span>
-          <div class="inputRow">
-            <div class="colLeft">
-              <span class="label">Roman Value:</span>
+            <div class="clearBtn">
+              <button id="clearRoman" type="button">Clear</button>
             </div>
-            <div class="colRight">
-              <input id="roman" type="text"></input>
+            <span id="romanResult"></span>
+          </div>
+          <div id="convertToArabic">
+            <div class="inputRow">
+              <div class="colLeft">
+                <span class="label">Roman Value:</span>
+              </div>
+              <div class="colRight">
+                <input id="roman" type="text"></input>
+              </div>
             </div>
             <div class="convertBtn">
               <button id="convertToArabic" type="button">Convert</button>
@@ -58,7 +63,9 @@
             </div>
             <span id="arabicResult"></span>
           </div>
-          <a href="test.html" rel="external">This is a link. Click me.</a>
+          <div class="changeLink">
+            <a id="changeConversion">Convert Roman Numerals to Arabic Numbers</a>
+          </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
 

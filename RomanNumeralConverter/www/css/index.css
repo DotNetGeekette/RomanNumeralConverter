@@ -14,13 +14,15 @@
 }
 
 .convertBtn {
-	width: 50%;
+	width: 40%;
 	float: left;
+	margin-left: 20px;
 }
 
 .clearBtn {
-	width: 50%;
-	float: left;
+	width: 40%;
+	float: right;
+	margin-right: 20px;
 }
 
 .label {
@@ -28,3 +30,6 @@
 	font-weight:bold;
 }
 
+.changeLink {
+	text-align: center;
+}
