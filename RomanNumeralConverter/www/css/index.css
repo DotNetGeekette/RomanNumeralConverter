@@ -1,10 +1,11 @@
 .inputRow {
-	
+    clear: both;
 }
 
 .colLeft {
 	width: 40%;
 	float: left;
+	margin-top:15px;
 }
 
 .colRight {
@@ -21,3 +22,9 @@
 	width: 50%;
 	float: left;
 }
+
+.label {
+	font-size:12;
+	font-weight:bold;
+}
+

@@ -1,4 +1,3 @@
-
 $('#convertToRoman').on('click',function(){
 	var result = convertToRoman($('#arabic').val());
 	$('#romanResult').html(result);
@@ -7,6 +6,16 @@ $('#convertToRoman').on('click',function(){
 $('#convertToArabic').on('click', function() {
 	var result = convertToArabic($('#roman').val());
 	$('#arabicResult').html(result);
+});
+
+$('#clearRoman').on('click',function(){
+	$('#arabic').val('');
+	$('#romanResult').html('');
+});
+
+$('#clearArabic').on('click', function() {
+	$('#roman').val('');
+	$('#arabicResult').html('');
 });
 
 function convertToRoman(arabicValue) {
