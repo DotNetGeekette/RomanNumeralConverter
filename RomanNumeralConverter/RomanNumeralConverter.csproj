@@ -158,6 +158,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="www\cordova.js" />
+    <Content Include="www\css\css1.css" />
+    <Content Include="www\css\css2.css" />
     <Content Include="www\css\index.css" />
     <Content Include="www\img\logo.png" />
     <Content Include="www\index.html">

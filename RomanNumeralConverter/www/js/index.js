@@ -10,12 +10,35 @@ var app = {
 
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		   
+		/*
+		// If you want to have a different look-and-feel per platform, you can load style sheets based
+		// of PhoneGap's device.platform.  However, this isn't available until the device is ready, so be aware
+		// of lags
+
+		if(device.platform=="Win32NT") {
+			loadCss("css/css1.css");
+		} else {
+			loadCss("css/css2.css");
+		}
+		*/
+		
+
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         
     }
 };
+
+function loadCss(filename) {
+    var fileref=document.createElement("link");
+    fileref.setAttribute("rel", "stylesheet");
+    fileref.setAttribute("type", "text/css");
+    fileref.setAttribute("href", filename);
+    document.getElementsByTagName("head")[0].appendChild(fileref);
+}
 
 $('#convertToArabicArea').hide();
 
@@ -50,8 +73,9 @@ $('#clearRoman').on('click',function(){
 
 $('#clearArabic').on('click', function() {
 	$('#roman').val('');
-	$('#reslt').html('');
+	$('#result').html('');
 });
+
 
 function convertToRoman(arabicValue) {
 	// Note: Not done as part of a kata.  I recognize that this could be refactored better :)
