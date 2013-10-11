@@ -1,0 +1,23 @@
+.inputRow {
+	
+}
+
+.colLeft {
+	width: 40%;
+	float: left;
+}
+
+.colRight {
+	width: 60%;
+	float: left;
+}
+
+.convertBtn {
+	width: 50%;
+	float: left;
+}
+
+.clearBtn {
+	width: 50%;
+	float: left;
+}
